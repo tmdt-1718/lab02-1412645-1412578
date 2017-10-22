@@ -1,0 +1,42 @@
+.litten-box{
+	position: absolute;
+	width: 300px;
+	height: 500px;
+	left: 50%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: -250px;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 3px 12px rgba(27,31,35,0.15);
+	overflow: hidden;
+	.litten-box-header{		
+		overflow: hidden;
+		width: 100%;
+		position: relative;
+		img{
+			width: 100%;
+		}
+		.litten-box-title{
+			position: absolute;
+			bottom: 10px;
+			left: 20px;
+			font-size: 2em;
+			font-weight: 100;
+			color: white;
+		}
+	}
+	.litten-box-content{
+		padding: 10px 15px 10px 15px;
+		
+	}
+}
+html, body, .container{
+	height: 100%;
+}
+body{
+	background-image: white; 
+}
+.litten-bgr{
+	background-color: white;
+}

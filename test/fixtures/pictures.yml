@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  picture_url: MyString
+  uploader: MyString
+  view_count: 1
+  Album: one
+
+two:
+  picture_url: MyString
+  uploader: MyString
+  view_count: 1
+  Album: two
