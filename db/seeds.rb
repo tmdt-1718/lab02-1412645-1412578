@@ -15,4 +15,5 @@ newuser2 = User.new
 newuser2.fullname = "Lê Hoàng Vũ"
 newuser2.email = "tranquangtri96@live.com"
 newuser2.password = "1412645"
+newuser2.friends.push(User.first)
 newuser2.save!
