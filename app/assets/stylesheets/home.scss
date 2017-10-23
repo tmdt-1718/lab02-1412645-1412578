@@ -1,0 +1,33 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.homepage{
+	margin-top: 20px;
+	h1{
+		font-size: 4.5rem;
+		text-align: center;
+	}
+	h3{
+		font-size: 2rem;
+		font-weight: 100;
+		text-align: center;
+	}
+	.homepage-menu{
+		background-color: white;
+		position: fixed;
+		left: 100px;
+		width: 100px;
+		height: 250px;
+		margin-top: -125px;
+		top: 50%;
+		ul{
+			padding-left: 0;
+			list-style: none;
+		}
+		ul li{
+			
+		}
+	}
+}
+
