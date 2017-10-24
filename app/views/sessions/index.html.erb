@@ -4,7 +4,7 @@
   <span><%= flash[:error] %></span>
 </div>
 <% end %>
-<%= form_with scope: :session, url: session_index_path, local: true, method: :post do |form| %>
+<%= form_with scope: :session, url: sessions_path, local: true, method: :post do |form| %>
 	<div class="form-group">
 		<label for="email">Thư điện tử</label>
 		<%= form.text_field :email, id: "email", class: "form-control" %>
@@ -14,4 +14,5 @@
 		<%= form.password_field :password, id: "password", class: "form-control" %>
 	</div>
 	<button type="submit" class="btn btn-primary">Đăng nhập</button>
+	<a href="<%= users_path %>">Chưa có tài khoản ?</a>
 <% end %>

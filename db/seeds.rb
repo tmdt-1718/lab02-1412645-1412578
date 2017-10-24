@@ -15,4 +15,16 @@ newuser2 = User.new
 newuser2.fullname = "Lê Hoàng Vũ"
 newuser2.email = "tranquangtri96@live.com"
 newuser2.password = "1412645"
+newuser2.friends.push(User.first)
 newuser2.save!
+# Trí gửi 5 mail cho Vũ
+Mail.delete_all
+(1..5).each do |item|
+	newmail = Mail.new
+	newmail.content = "Hello, this is #{item}-time i send you this message"
+	newmail.sender = newuser1
+	newmail.has_read = (item!=3)?false: true
+	newmail.receiver = User.second
+	newmail.save!
+end
+

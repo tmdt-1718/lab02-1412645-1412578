@@ -1,0 +1,19 @@
+<div class="col-md-12">
+<div class="message-panel">
+	<button class="message-btn">Tạo tin nhắn mới</button>
+	<button class="message-btn">Danh sách bạn bè</button>
+	<button class="message-btn">Tin nhắn đã gửi</button>
+</div>
+<ul class="message-list">
+<% @mails.each do |mail| %>
+<li>
+	<div class="message">
+		<div class="message-sender <%= mail.has_read ? 'highlight' : '' %>"><%= "#{mail.sender.email}" %></div>
+		<div class="message-title">hello world</div>
+		<div class="message-time"><%= "#{mail.created_at}" %></div>
+	</div>
+	
+</li>
+<% end %>
+</ul>
+</div>

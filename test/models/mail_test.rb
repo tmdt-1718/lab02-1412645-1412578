@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SessionControllerTest < ActionDispatch::IntegrationTest
+class MailTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

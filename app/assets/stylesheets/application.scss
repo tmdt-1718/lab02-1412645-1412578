@@ -2,12 +2,13 @@
 @import "font-awesome";
 @import "home";
 @import "litten";
+@import "mails";
 
-$primary_bg_color: #45445a;
-$primary_text_color: white;
+$primary_bg_color: white;
+$primary_text_color: black;
 $primary_bg_color2: #3a3a48;
 $breacrum_bg_color: #f4f4f4;
-$content_bg_color: white;
+$content_bg_color: black;
 
 .logo{
 	width: 60px;
@@ -28,7 +29,7 @@ $content_bg_color: white;
 		}
 	}
 	.navbar-nav .nav-link{
-		color: white !important;
+		color: black !important;
 	}
 	@media (min-width: 992px){
 		.navbar-nav .nav-link{
@@ -149,13 +150,13 @@ footer{
 }
 .btn-outline-custom{
 	@extend .btn-outline-primary;
-	border-color: white;
+	border-color: black;
 	&:hover{
 		background-color: #4c4b64;
-		border-color: white;
+		border-color: black;
 	}
 	a{
-		color: white;
+		color: black;
 	}
 	a:hover{
 		text-decoration: none;
@@ -181,4 +182,7 @@ footer{
 	background-color: $breacrum_bg_color;
 	font-size: 1rem;
 	margin-left: 22px;
+}
+.row{
+	height: 100%;
 }
