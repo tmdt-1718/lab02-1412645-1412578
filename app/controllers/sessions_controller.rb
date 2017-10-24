@@ -1,4 +1,4 @@
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
 	before_action :no_need_authorize, only: [:login, :create, :register]
 	before_action :need_authorize, only: [:destroy]
 	def create
@@ -12,12 +12,12 @@ class SessionController < ApplicationController
 				return
 			else
 				flash[:error] = "Sai mật khẩu!"
-				redirect_to session_index_path
+				redirect_to sessions_path
 				return
 			end
 		rescue ActiveRecord::RecordNotFound => e
 			flash[:error] = "Thư điện tử không tồn tại!"
-			redirect_to session_index_path
+			redirect_to sessions_path
 		end
 	end
 	def destroy

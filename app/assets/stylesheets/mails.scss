@@ -1,0 +1,81 @@
+// Place all the styles related to the mails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.message-list{
+	height: 100%;
+	overflow: scroll;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	.message{
+		font-size: 0;
+		width: 100%;
+		&:hover{
+			background-color: #fff3fa;
+		}
+		&-sender{
+			display: inline-block;
+			color: black;
+			font-size: 1rem;
+			width: 30%;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		&-sender.highlight{
+			color: #ff7683;
+			font-weight: bold;
+		}
+		&-title{
+			display: inline-block;
+			color: black;
+			font-size: 1rem;
+			width: 50%;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		&-time{
+			display: inline-block;
+			color: black;
+			font-size: 0.8rem;
+			width: 20%;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		@media (max-width: 767px){
+			&-time, &-sender{
+				display: none;
+			}
+			&-title{
+				width: 100%;
+			}
+		}
+	}
+}
+
+.message-panel{
+	width: 100%;
+	min-height: 60px;
+	font-size: 0;
+	.message-btn{
+		display: inline-block;
+		font-size: 1rem;
+		text-align: center;
+		width: 33%;
+		border: none;
+		outline: none;
+		&:hover{
+			background-color: #ef0063;
+			color: white;
+		}
+	}
+	@media (max-width: 767px){
+		.message-btn{
+			display: block;
+			width: 100%;
+		}
+	}
+}

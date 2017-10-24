@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
 	before_action :no_need_authorize, only: [:create]
 	def create
 		begin
@@ -6,14 +6,14 @@ class UserController < ApplicationController
 				new_user = User.new(user_params)
 			    new_user.password = user_params[:password]
 			    new_user.save!
-				redirect_to session_index_path
+				redirect_to sessions_path
 			else
 				flash[:error]="Tài khoản #{user_params[:email]} đăng ký đã tồn tại!"
-				redirect_to user_index_path
+				redirect_to users_path
 			end
 		rescue ActiveRecord::RecordNotSaved
 			flash[:error]="Đã xảy ra lỗi trong quá trình đăng ký!"
-			redirect_to user_index_path
+			redirect_to users_path
 		end
 	end
 	def index
