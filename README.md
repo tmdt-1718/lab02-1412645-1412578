@@ -13,7 +13,7 @@ URL: **[https://lab02-1412578-1412645.herokuapp.com/](https://lab02-1412578-1412
 Sinh viên check vào các mục bên dưới và ghi mã sinh viên đã làm vào chức năng theo mẫu. Mục nào ko có MSSV là tính điểm theo nhóm. Cần sắp xếp các chức năng bên dưới theo thứ tự MSSV đã thực hiện.
 
 Yêu cầu **GIT**:
-* [ ] Sử dụng GIT theo [Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow).
+* [x] Sử dụng GIT theo [Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow).
 
 Yêu cầu **bắt buộc** *(Hoàn thành 5/9 yêu cầu)*
 * [x] Đăng ký tài khoản bằng email, password, và tên.  (**1412578**)
