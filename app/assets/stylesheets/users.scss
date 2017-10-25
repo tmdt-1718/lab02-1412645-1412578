@@ -1,3 +1,83 @@
 // Place all the styles related to the user controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.newfriend-list, .user-list, .friend-list{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-top: 10px;
+	font-size: 0;
+	.friend{
+		margin: 0 15px 10px 0;
+		padding: 5px;
+		position: relative;
+		display: inline-block;
+		font-size: 0;
+		&:hover{
+			background-color: #ffdae0;
+		}
+		.friend-avatar{
+			vertical-align: middle;
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			background-color: gray;
+		}
+		.friend-info{
+			vertical-align: middle;
+			padding: 0 2px;
+			margin-left: 5px;
+			display: inline-block;
+			height: 50px;
+			.friend-fullname{
+				font-size: 1rem;
+			}
+			.friend-email{
+				font-size: 0.8rem;
+			}	
+		}
+	}
+}
+.friend-list-title{
+	font-size: 1.6rem;
+}
+#form-search{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 20px;
+	#user_email{
+		border: solid 1px #c2c2c2;
+		outline: none;
+		vertical-align: middle;
+	}
+	#submit{
+		vertical-align: middle;
+		display: none;
+	}
+}
+.friend-list-title{
+	display: inline-block;
+	vertical-align: middle;
+}
+.friend-btn-group{
+	font-size: 1rem;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+	input, button {
+		outline: none;
+		background-color: white;
+		border: solid 1px;
+	}
+}
+.dropdown-friend{
+	font-size: 1rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #757575;
+	font-size: 0.8rem;
+	.dropdown-toggle-friend::after{
+		border: 0;
+	}
+}

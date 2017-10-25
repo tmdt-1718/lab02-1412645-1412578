@@ -1,0 +1,47 @@
+<div class="friend-panel">
+	<div class="friend-list-title">Kết bạn</div>
+    <%= form_tag("/users/find", method: "post", id: "form-search", remote: true) do %>
+	  <%= text_field_tag(:user_email) %>
+	  <%= submit_tag("Search", id: "submit") %>
+	<% end %>
+</div>
+<ul class="user-list">
+	
+</ul>
+
+<div class="friend-panel">
+	<div class="friend-list-title">Yêu cầu kết bạn</div>
+</div>
+<ul class="newfriend-list">
+	<% @newfriend_requests.each do |newfriend_request| %>
+		<% friend = newfriend_request.sender %>
+		<div class="friend">
+			<div class="friend-avatar"></div>
+			<div class="friend-info">
+				<div class="friend-fullname"><%= "#{friend.fullname}" %></div>
+				<div class="friend-email"><%= "#{friend.email}" %></div>
+			</div>
+			<div class="friend-btn-group">
+				<%= form_tag("/users/accept", remote: true, method: :post) do %>
+				<%= hidden_field_tag(:user_id, friend.id) %>
+				<%= hidden_field_tag(:request_id, newfriend_request.id) %>
+				<%= submit_tag("Chấp nhận", id: "accept") %>
+				<% end %>
+			</div>
+		</div>
+	<% end %>
+</ul>
+<div class="friend-panel">
+	<div class="friend-list-title">Bạn bè</div>
+</div>
+<ul class="friend-list">
+	<% @friends.each do |friend| %>
+		<div class="friend">
+			<div class="friend-avatar"></div>
+			<div class="friend-info">
+				<div class="friend-fullname"><%= "#{friend.fullname}" %></div>
+				<div class="friend-email"><%= "#{friend.email}" %></div>
+			</div>
+		</div>
+	<% end %>
+</ul>

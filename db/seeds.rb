@@ -13,10 +13,21 @@ newuser1.password = "1412578"
 newuser1.save!
 newuser2 = User.new
 newuser2.fullname = "Lê Hoàng Vũ"
-newuser2.email = "tranquangtri96@live.com"
+newuser2.email = "lehoangvu96@gmail.com"
 newuser2.password = "1412645"
 newuser2.friends.push(User.first)
 newuser2.save!
+newuser3 = User.new
+newuser3.fullname = "Trần Hông Thuận"
+newuser3.email = "tranhongthuan96@gmail.com"
+newuser3.password = "1412539"
+newuser3.save!
+req = FriendRequest.new
+req.sender_id = newuser3.id
+req.receiver_id = newuser2.id
+req.save!
+newuser3.friend_requests_send.push(req)
+newuser3.save!
 # Trí gửi 5 mail cho Vũ
 Mail.delete_all
 (1..5).each do |item|
