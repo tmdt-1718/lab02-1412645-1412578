@@ -1,0 +1,25 @@
+<div class='friend'>
+	<div class='friend-avatar'></div>
+	<div class='friend-info'>
+		<div class='friend-fullname'><%= user[:fullname] %></div>
+		<div class='friend-email'><%= user[:email] %></div>
+	</div>
+	<div class='friend-btn-group'>
+		<% if user[:status] == :stranger %>
+		<%= form_tag('/users/makefriend', remote: true, method: :post) do %>
+		<%= hidden_field_tag(:user_id, user[:id]) %>
+		<%= submit_tag('Kết bạn', id: 'makefriend') %>
+		<% end %>
+		<% elsif user[:status] == :friend %>
+		<%= form_tag('/users/unfriend', remote: true, method: :post) do %>
+		<%= hidden_field_tag(:user_id, user[:id]) %>
+		<%= submit_tag('Hủy kết bạn',  data: { confirm: "Bạn đang hủy kết bạn với #{user[:fullname]}, bạn có chắc không ?" }) %>
+		<% end %>
+		<% elsif user[:status] == :request %>
+		<%= form_tag('/users/undorequest', remote: true, method: :post) do %>
+		<%= hidden_field_tag(:user_id, user[:id]) %>
+		<%= submit_tag('Hủy yêu cầu') %>
+		<% end %>
+		<% end %>
+	</div>
+</div>

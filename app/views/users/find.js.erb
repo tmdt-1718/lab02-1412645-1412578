@@ -1,0 +1,4 @@
+$(".user-list").html("")
+<% @users.each do |user| %>
+	$(".user-list").append("<%= j render 'users/makefriend', user: user %>");
+<% end %>

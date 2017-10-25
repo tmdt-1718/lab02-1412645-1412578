@@ -15,12 +15,6 @@
 				</button>
 				<a class="navbar-brand logo">LAB02</a>
 				<div class="navbar-collapse collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Albums</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-					</ul>
 					<ul class="navbar-nav ml-auto">
 						<% if !login? %>
 						<%= render "shared/guest_settings" %>
@@ -33,7 +27,14 @@
 		</nav>
 		<div class="container container-content">
 			<div class="row">
+				<div class="col-md-12">
+					<div class="message-panel">
+						<button class="message-btn">Tạo tin nhắn mới</button>
+						<button class="message-btn"><a href="<%= users_friendship_path %>">Danh sách bạn bè</a></button>
+						<button class="message-btn">Tin nhắn đã gửi</button>
+					</div>
 					<%= yield %>
+				</div>
 			</div>
 		</div>
 		<footer>

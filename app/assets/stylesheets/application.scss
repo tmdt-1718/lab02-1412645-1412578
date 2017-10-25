@@ -3,6 +3,7 @@
 @import "home";
 @import "litten";
 @import "mails";
+@import "users";
 
 $primary_bg_color: white;
 $primary_text_color: black;
@@ -185,4 +186,33 @@ footer{
 }
 .row{
 	height: 100%;
+}
+.message-panel{
+	width: 100%;
+	min-height: 60px;
+	font-size: 0;
+	.message-btn{
+		display: inline-block;
+		font-size: 1rem;
+		text-align: center;
+		width: 33%;
+		border: none;
+		outline: none;
+		&:hover{
+			background-color: #ef0063;
+			color: white;
+		}
+	}
+	@media (max-width: 767px){
+		.message-btn{
+			display: block;
+			width: 100%;
+		}
+	}
+}
+.message-btn{
+	a{
+		color: black;
+		text-decoration: none;
+	}
 }
