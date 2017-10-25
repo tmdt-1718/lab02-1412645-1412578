@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title><%= yield(:title) %></title>
+		<%= csrf_meta_tags %>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	</head>
+	<body>
+		<nav class="navbar navbar-dark bg-dark navbar-default-custom navbar-expand-lg">
+			<div class="container">
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand logo">LAB02</a>
+				<div class="navbar-collapse collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<% if !login? %>
+						<%= render "shared/guest_settings" %>
+						<% else %>
+						<%= render "shared/user_settings" %>
+						<% end %>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container container-content">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="message-panel">
+						<button class="message-btn">Tạo tin nhắn mới</button>
+						<button class="message-btn"><a href="<%= users_friendship_path %>">Danh sách bạn bè</a></button>
+						<button class="message-btn">Tin nhắn đã gửi</button>
+					</div>
+					<%= yield %>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+				<p>Copyright 2017 by Trí &amp; Vũ. All Rights Reserved.</p>
+			</div>
+		</footer>
+	</body>
+</html>
